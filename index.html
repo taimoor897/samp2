@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AURA | Weddings & Celebrations</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#f5f3ec;--green:#536b55;--dark:#28352b;--orange:#bd805f;--muted:#777d72}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--dark);font-family:'DM Sans',sans-serif;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+nav{height:85px;display:flex;justify-content:space-between;align-items:center;padding:0 8%;background:rgba(245,243,236,.92);position:fixed;top:0;width:100%;z-index:99;backdrop-filter:blur(15px)}
+.logo{font-family:'Playfair Display',serif;font-size:32px;letter-spacing:6px;color:var(--green)}
+.navlinks{display:flex;gap:30px;font-size:11px;letter-spacing:1px}
+.navlinks a:hover{color:var(--orange)}
+.navbutton{background:var(--green);color:white;padding:14px 22px;font-size:10px;letter-spacing:2px}
+.hero{min-height:100vh;padding:160px 9% 90px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:50px}
+.eyebrow{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--orange);margin-bottom:22px}
+h1,h2,h3{font-family:'Playfair Display',serif;font-weight:400}
+.hero h1{font-size:clamp(55px,7vw,92px);line-height:1.05}
+.hero h1 em{color:var(--green)}
+.hero p,.about p{font-size:13px;line-height:2;color:var(--muted);max-width:430px;margin:25px 0 35px}
+.btn{display:inline-block;background:var(--green);color:white;padding:17px 28px;font-size:10px;letter-spacing:2px;transition:.3s}
+.btn:hover{background:var(--orange);transform:translateY(-5px)}
+.hero-visual{position:relative;perspective:1000px}
+.hero-visual img{width:100%;height:570px;object-fit:cover;border-radius:180px 180px 5px 5px;transform:rotateY(-7deg);box-shadow:20px 30px 50px #28352b20;transition:.7s}
+.hero-visual:hover img{transform:rotateY(0) translateY(-8px)}
+.float-card{position:absolute;bottom:35px;left:-45px;background:white;padding:23px 28px;box-shadow:0 15px 40px #28352b20;animation:float 4s ease-in-out infinite}
+.float-card strong{font-family:'Playfair Display';font-size:25px;display:block}
+.float-card span{font-size:9px;letter-spacing:2px;color:var(--muted)}
+@keyframes float{50%{transform:translateY(-12px)}}
+.section{padding:110px 9%}
+.center{text-align:center}
+.center h2{font-size:55px;margin-bottom:18px}
+.center p{color:var(--muted);font-size:12px;letter-spacing:1px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.about img{width:100%;height:490px;object-fit:cover;border-radius:5px 130px 5px 5px}
+.about h2{font-size:57px;line-height:1.1}
+.about h2 em{color:var(--green)}
+.services{background:#e9e9df}
+.servicegrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:55px}
+.service{background:var(--cream);padding:40px 30px;border-radius:5px;transition:.5s;transform-style:preserve-3d}
+.service:hover{transform:perspective(800px) rotateX(5deg) rotateY(-5deg) translateY(-12px);box-shadow:0 25px 45px #28352b20}
+.service .number{font-size:11px;color:var(--orange);letter-spacing:3px}
+.service h3{font-size:29px;margin:25px 0 15px}
+.service p{font-size:12px;color:var(--muted);line-height:2}
+.gallery{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:15px;margin-top:50px}
+.gallery img{width:100%;height:310px;object-fit:cover;transition:.6s}
+.gallery div{overflow:hidden}
+.gallery img:hover{transform:scale(1.07)}
+.quote{background:var(--green);color:white;text-align:center;padding:110px 10%}
+.quote h2{font-size:clamp(40px,6vw,70px);max-width:850px;margin:auto;line-height:1.2}
+.quote p{color:#d8e0d4;margin-top:25px;font-size:12px;letter-spacing:2px}
+.contact{text-align:center}
+.contact h2{font-size:60px;margin-bottom:20px}
+.contact p{color:var(--muted);margin-bottom:35px;font-size:13px}
+footer{padding:30px;text-align:center;background:var(--dark);color:#d8d8cf;font-size:10px;letter-spacing:2px}
+footer span{color:#b9c6a9}
+.reveal{opacity:0;transform:translateY(35px);transition:.8s}
+.reveal.show{opacity:1;transform:none}
+@media(max-width:800px){
+ nav{padding:0 5%}.navlinks{display:none}
+ .hero{grid-template-columns:1fr;padding:130px 7% 70px}
+ .hero-visual img{height:430px}
+ .float-card{left:-10px}
+ .about{grid-template-columns:1fr;gap:35px}
+ .about img{height:380px}
+ .servicegrid{grid-template-columns:1fr}
+ .gallery{grid-template-columns:1fr 1fr}
+ .gallery img{height:220px}
+ .section{padding:75px 7%}
+}
+</style>
+</head>
+<body>
+<nav>
+<a class="logo" href="#">AURA.</a>
+<div class="navlinks">
+<a href="#home">Home</a><a href="#story">Our Story</a><a href="#services">Experiences</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a>
+</div>
+<a class="navbutton" href="#contact">PLAN YOUR EVENT ↗</a>
+</nav>
+
+<section class="hero" id="home">
+<div class="reveal">
+<div class="eyebrow">A place for beautiful beginnings</div>
+<h1>Celebrate<br>the art of<br><em>togetherness.</em></h1>
+<p>A thoughtfully designed destination for weddings, celebrations and moments that deserve to be remembered.</p>
+<a href="#contact" class="btn">DISCOVER AURA ↗</a>
+</div>
+<div class="hero-visual reveal">
+<img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=85&w=1100" alt="Wedding venue">
+<div class="float-card"><strong>Beautifully Yours.</strong><span>YOUR DAY. YOUR STORY.</span></div>
+</div>
+</section>
+
+<section class="section about" id="story">
+<div class="reveal">
+<div class="eyebrow">A little about us</div>
+<h2>Spaces that feel<br>like <em>something special.</em></h2>
+<p>We believe celebrations should feel effortless, personal and unforgettable. Every corner of AURA is designed to create an atmosphere where beautiful memories naturally unfold.</p>
+<a class="btn" href="#services">EXPLORE OUR SPACE</a>
+</div>
+<img class="reveal" src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=85&w=1000" alt="Elegant event setup">
+</section>
+
+<section class="section services" id="services">
+<div class="center reveal">
+<div class="eyebrow">Made for every occasion</div>
+<h2>Moments worth gathering for.</h2>
+<p>ONE BEAUTIFUL PLACE. COUNTLESS MEMORIES.</p>
+</div>
+<div class="servicegrid">
+<div class="service reveal"><span class="number">01 / CELEBRATE</span><h3>Weddings</h3><p>A beautiful backdrop for the beginning of your forever.</p></div>
+<div class="service reveal"><span class="number">02 / CONNECT</span><h3>Mehndi & Events</h3><p>Celebrate tradition, colour and the people you love.</p></div>
+<div class="service reveal"><span class="number">03 / GATHER</span><h3>Private Gatherings</h3><p>Thoughtful spaces for meaningful moments together.</p></div>
+</div>
+</section>
+
+<section class="section" id="gallery">
+<div class="center reveal"><div class="eyebrow">The AURA experience</div><h2>Details make the difference.</h2></div>
+<div class="gallery">
+<div class="reveal"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=85&w=800" alt="Wedding ceremony"></div>
+<div class="reveal"><img src="https://images.unsplash.com/photo-1507504031003-b417219a0fde?q=85&w=800" alt="Wedding flowers"></div>
+<div class="reveal"><img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=85&w=800" alt="Wedding dinner"></div>
+</div>
+</section>
+
+<section class="quote">
+<div class="reveal">
+<div class="eyebrow" style="color:#d7c8a3">Your story deserves a beautiful setting</div>
+<h2>"The best memories are made when everyone comes together."</h2>
+<p>LET'S MAKE YOUR NEXT CELEBRATION SPECIAL.</p>
+</div>
+</section>
+
+<section class="section contact" id="contact">
+<div class="eyebrow">Let's make it happen</div>
+<h2 class="reveal">Your date. Your vision. <em style="color:#536b55">Our space.</em></h2>
+<p>Tell us about your celebration and let's start planning.</p>
+<a class="btn" href="https://wa.me/923001234567">START A CONVERSATION ↗</a>
+</section>
+
+<footer>© 2026 <span>AURA</span> — BEAUTIFULLY TOGETHER.</footer>
+<script>
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')})
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
